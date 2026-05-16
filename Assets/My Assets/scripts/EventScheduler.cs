@@ -12,8 +12,7 @@ public class MusicEventList {
     public MusicEvent[] events;
 }
 
-public class EventScheduler : MonoBehaviour
-{
+public class EventScheduler : MonoBehaviour {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private TextAsset eventJson;
     [SerializeField] private VisualActionReceiver visualReceiver;
@@ -52,9 +51,7 @@ public class EventScheduler : MonoBehaviour
 
         while (nextEventIndex < eventData.events.Length && currentSongTime >= eventData.events[nextEventIndex].time) {
             MusicEvent musicEvent = eventData.events[nextEventIndex];
-
             TriggerEvent(musicEvent);
-
             nextEventIndex++;
         }
 
