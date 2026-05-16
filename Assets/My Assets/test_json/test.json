@@ -1,0 +1,8 @@
+{
+  "events": [
+    { "time": 0.0, "action": "kick" },
+    { "time": 1.0, "action": "snare" },
+    { "time": 2.0, "action": "kick" },
+    { "time": 3.0, "action": "snare" }
+  ]
+}
