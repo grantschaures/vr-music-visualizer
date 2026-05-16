@@ -2,15 +2,13 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class MusicEvent
-{
+public class MusicEvent {
     public float time;
     public string action;
 }
 
 [Serializable]
-public class MusicEventList
-{
+public class MusicEventList {
     public MusicEvent[] events;
 }
 
@@ -24,18 +22,15 @@ public class EventScheduler : MonoBehaviour
     private int nextEventIndex = 0;
     private float previousSongTime = 0f;
 
-    private void Awake()
-    {
-        if (eventJson == null)
-        {
+    private void Awake() {
+        if (eventJson == null) {
             Debug.LogError("No event JSON assigned.");
             return;
         }
 
         eventData = JsonUtility.FromJson<MusicEventList>(eventJson.text);
 
-        if (eventData == null || eventData.events == null)
-        {
+        if (eventData == null || eventData.events == null) {
             Debug.LogError("Failed to parse music event JSON.");
             return;
         }
@@ -43,23 +38,19 @@ public class EventScheduler : MonoBehaviour
         Array.Sort(eventData.events, (a, b) => a.time.CompareTo(b.time));
     }
 
-    private void Update()
-    {
-        if (audioSource == null || visualReceiver == null || eventData == null)
-        {
+    private void Update() {
+        if (audioSource == null || visualReceiver == null || eventData == null) {
             return;
         }
 
         float currentSongTime = audioSource.time;
 
         // Detect when the looping AudioSource wraps back to the beginning.
-        if (currentSongTime < previousSongTime)
-        {
+        if (currentSongTime < previousSongTime) {
             nextEventIndex = 0;
         }
 
-        while (nextEventIndex < eventData.events.Length && currentSongTime >= eventData.events[nextEventIndex].time)
-        {
+        while (nextEventIndex < eventData.events.Length && currentSongTime >= eventData.events[nextEventIndex].time) {
             MusicEvent musicEvent = eventData.events[nextEventIndex];
 
             TriggerEvent(musicEvent);
@@ -70,10 +61,8 @@ public class EventScheduler : MonoBehaviour
         previousSongTime = currentSongTime;
     }
 
-    private void TriggerEvent(MusicEvent musicEvent)
-    {
-        switch (musicEvent.action)
-        {
+    private void TriggerEvent(MusicEvent musicEvent) {
+        switch (musicEvent.action) {
             case "kick":
                 visualReceiver.OnKick();
                 break;

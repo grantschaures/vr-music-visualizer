@@ -1,7 +1,7 @@
+using System.Reflection.Metadata;
 using UnityEngine;
 
-public class VisualActionReceiver : MonoBehaviour
-{
+public class VisualActionReceiver : MonoBehaviour {
     [SerializeField] private Transform visualTarget;
     [SerializeField] private Renderer targetRenderer;
 
@@ -12,18 +12,14 @@ public class VisualActionReceiver : MonoBehaviour
     private Vector3 originalScale;
     private float pulseAmount;
 
-    private void Start()
-    {
-        if (visualTarget != null)
-        {
+    private void Start() {
+        if (visualTarget != null) {
             originalScale = visualTarget.localScale;
         }
     }
 
-    private void Update()
-    {
-        if (visualTarget == null)
-        {
+    private void Update() {
+        if (visualTarget == null) {
             return;
         }
 
@@ -33,25 +29,20 @@ public class VisualActionReceiver : MonoBehaviour
         visualTarget.localScale = originalScale * scaleMultiplier;
     }
 
-    public void OnKick()
-    {
+    public void OnKick() {
         Debug.Log("Kick event triggered");
         pulseAmount = 1f;
 
-        if (targetRenderer != null)
-        {
+        if (targetRenderer != null) {
             targetRenderer.material.color = Color.red;
         }
     }
 
-    public void OnSnare()
-    {
+    public void OnSnare() {
         Debug.Log("Snare event triggered");
 
-        if (targetRenderer != null)
-        {
+        if (targetRenderer != null) {
             targetRenderer.material.color = Color.cyan;
         }
     }
-
 }
