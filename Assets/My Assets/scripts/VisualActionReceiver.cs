@@ -51,7 +51,7 @@ public class VisualActionReceiver : MonoBehaviour {
 
     public void OnSnare() {
         Debug.Log("Snare event triggered");
-        pulseAmount2 = 0.5f;
+        pulseAmount2 = 1.0f;
 
         if (targetRenderer2 != null) {
             targetRenderer2.material.color = Color.cyan;
