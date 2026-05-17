@@ -1,8 +1,339 @@
 {
-  "events": [
-    { "time": 0.0, "action": "kick" },
-    { "time": 1.0, "action": "snare" },
-    { "time": 2.0, "action": "kick" },
-    { "time": 3.0, "action": "snare" }
-  ]
+    "events": [
+        {
+            "time": 0.0,
+            "action": "kick"
+        },
+        {
+            "time": 1.0,
+            "action": "snare"
+        },
+        {
+            "time": 1.5,
+            "action": "kick"
+        },
+        {
+            "time": 2.5,
+            "action": "kick"
+        },
+        {
+            "time": 3.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 4.0,
+            "action": "kick"
+        },
+        {
+            "time": 5.0,
+            "action": "snare"
+        },
+        {
+            "time": 5.5,
+            "action": "kick"
+        },
+        {
+            "time": 6.5,
+            "action": "kick"
+        },
+        {
+            "time": 7.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 8.0,
+            "action": "kick"
+        },
+        {
+            "time": 9.0,
+            "action": "snare"
+        },
+        {
+            "time": 9.5,
+            "action": "kick"
+        },
+        {
+            "time": 10.5,
+            "action": "kick"
+        },
+        {
+            "time": 11.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 12.0,
+            "action": "kick"
+        },
+        {
+            "time": 13.0,
+            "action": "snare"
+        },
+        {
+            "time": 13.5,
+            "action": "kick"
+        },
+        {
+            "time": 14.5,
+            "action": "kick"
+        },
+        {
+            "time": 15.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 16.0,
+            "action": "kick"
+        },
+        {
+            "time": 17.0,
+            "action": "snare"
+        },
+        {
+            "time": 17.5,
+            "action": "kick"
+        },
+        {
+            "time": 18.5,
+            "action": "kick"
+        },
+        {
+            "time": 19.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 20.0,
+            "action": "kick"
+        },
+        {
+            "time": 21.0,
+            "action": "snare"
+        },
+        {
+            "time": 21.5,
+            "action": "kick"
+        },
+        {
+            "time": 22.5,
+            "action": "kick"
+        },
+        {
+            "time": 23.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 24.0,
+            "action": "kick"
+        },
+        {
+            "time": 25.0,
+            "action": "snare"
+        },
+        {
+            "time": 25.5,
+            "action": "kick"
+        },
+        {
+            "time": 26.5,
+            "action": "kick"
+        },
+        {
+            "time": 27.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 28.0,
+            "action": "kick"
+        },
+        {
+            "time": 29.0,
+            "action": "snare"
+        },
+        {
+            "time": 29.5,
+            "action": "kick"
+        },
+        {
+            "time": 30.5,
+            "action": "kick"
+        },
+        {
+            "time": 31.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 32.0,
+            "action": "kick"
+        },
+        {
+            "time": 33.0,
+            "action": "snare"
+        },
+        {
+            "time": 33.5,
+            "action": "kick"
+        },
+        {
+            "time": 34.5,
+            "action": "kick"
+        },
+        {
+            "time": 35.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 36.0,
+            "action": "kick"
+        },
+        {
+            "time": 37.0,
+            "action": "snare"
+        },
+        {
+            "time": 37.5,
+            "action": "kick"
+        },
+        {
+            "time": 38.5,
+            "action": "kick"
+        },
+        {
+            "time": 39.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 40.0,
+            "action": "kick"
+        },
+        {
+            "time": 41.0,
+            "action": "snare"
+        },
+        {
+            "time": 41.5,
+            "action": "kick"
+        },
+        {
+            "time": 42.5,
+            "action": "kick"
+        },
+        {
+            "time": 43.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 44.0,
+            "action": "kick"
+        },
+        {
+            "time": 45.0,
+            "action": "snare"
+        },
+        {
+            "time": 45.5,
+            "action": "kick"
+        },
+        {
+            "time": 46.5,
+            "action": "kick"
+        },
+        {
+            "time": 47.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 48.0,
+            "action": "kick"
+        },
+        {
+            "time": 49.0,
+            "action": "snare"
+        },
+        {
+            "time": 49.5,
+            "action": "kick"
+        },
+        {
+            "time": 50.5,
+            "action": "kick"
+        },
+        {
+            "time": 51.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 52.0,
+            "action": "kick"
+        },
+        {
+            "time": 53.0,
+            "action": "snare"
+        },
+        {
+            "time": 53.5,
+            "action": "kick"
+        },
+        {
+            "time": 54.5,
+            "action": "kick"
+        },
+        {
+            "time": 55.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 56.0,
+            "action": "kick"
+        },
+        {
+            "time": 57.0,
+            "action": "snare"
+        },
+        {
+            "time": 57.5,
+            "action": "kick"
+        },
+        {
+            "time": 58.5,
+            "action": "kick"
+        },
+        {
+            "time": 59.0,
+            "action": "snare"
+        },
+
+        {
+            "time": 60.0,
+            "action": "kick"
+        },
+        {
+            "time": 61.0,
+            "action": "snare"
+        },
+        {
+            "time": 61.5,
+            "action": "kick"
+        },
+        {
+            "time": 62.5,
+            "action": "kick"
+        },
+        {
+            "time": 63.0,
+            "action": "snare"
+        }
+    ]
 }

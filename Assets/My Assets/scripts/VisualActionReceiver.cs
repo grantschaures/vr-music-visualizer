@@ -1,47 +1,60 @@
 using UnityEngine;
 
 public class VisualActionReceiver : MonoBehaviour {
-    [SerializeField] private Transform visualTarget;
-    [SerializeField] private Renderer targetRenderer;
+    [SerializeField] private Transform visualTarget1;
+    [SerializeField] private Transform visualTarget2;
+    [SerializeField] private Renderer targetRenderer1;
+    [SerializeField] private Renderer targetRenderer2;
 
     [Header("Pulse Settings")]
     [SerializeField] private float kickScale = 1.5f;
-    [SerializeField] private float returnSpeed = 3f;
+    [SerializeField] private float returnSpeed = 6f;
 
-    private Vector3 originalScale;
-    private float pulseAmount;
+    private Vector3 originalScale1;
+    private Vector3 originalScale2;
+    private float pulseAmount1;
+    private float pulseAmount2;
 
     private void Start() {
-        if (visualTarget != null) {
-            originalScale = visualTarget.localScale;
+        if (visualTarget1 != null) {
+            originalScale1 = visualTarget1.localScale;
+        }
+        if (visualTarget2 != null) {
+            originalScale2 = visualTarget2.localScale;
         }
     }
 
     private void Update() {
-        if (visualTarget == null) {
-            return;
+        // Update target 1 (kick)
+        if (visualTarget1 != null) {
+            pulseAmount1 = Mathf.Lerp(pulseAmount1, 0f, Time.deltaTime * returnSpeed);
+            float scaleMultiplier1 = Mathf.Lerp(1f, kickScale, pulseAmount1);
+            visualTarget1.localScale = originalScale1 * scaleMultiplier1;
         }
 
-        pulseAmount = Mathf.Lerp(pulseAmount, 0f, Time.deltaTime * returnSpeed);
-
-        float scaleMultiplier = Mathf.Lerp(1f, kickScale, pulseAmount);
-        visualTarget.localScale = originalScale * scaleMultiplier;
+        // Update target 2 (snare)
+        if (visualTarget2 != null) {
+            pulseAmount2 = Mathf.Lerp(pulseAmount2, 0f, Time.deltaTime * returnSpeed);
+            float scaleMultiplier2 = Mathf.Lerp(1f, kickScale, pulseAmount2);
+            visualTarget2.localScale = originalScale2 * scaleMultiplier2;
+        }
     }
 
     public void OnKick() {
         Debug.Log("Kick event triggered");
-        pulseAmount = 1f;
+        pulseAmount1 = 1f;
 
-        if (targetRenderer != null) {
-            targetRenderer.material.color = Color.red;
+        if (targetRenderer1 != null) {
+            targetRenderer1.material.color = Color.red;
         }
     }
 
     public void OnSnare() {
         Debug.Log("Snare event triggered");
+        pulseAmount2 = 0.5f;
 
-        if (targetRenderer != null) {
-            targetRenderer.material.color = Color.cyan;
+        if (targetRenderer2 != null) {
+            targetRenderer2.material.color = Color.cyan;
         }
     }
 }
